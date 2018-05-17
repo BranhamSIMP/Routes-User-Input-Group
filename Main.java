@@ -8,7 +8,7 @@ public class Main
 		// Tap to turn off screen saver
 		// Initiate home screen
 		// Start up map, calender, and search bar
-		// Connect things
+		// Connect things DONT DO THIS ONE YET ANDONEE
 		//
 		// Have a timer for detecting inactivity
 		// Return to home screen and overlay screen saver
