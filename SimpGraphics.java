@@ -1,3 +1,5 @@
+package RoutesAndUserInput;
+
 public interface SimpGraphics
 {
 	/*
@@ -10,7 +12,8 @@ public interface SimpGraphics
 	
 	public void destroy(); // Turns of JFrame
 	
-	public void enlarge(); // Makes JFrame and any components that are appropriate larger
-	
-	public void shrink(); // Makes JFrame and any components that are appropriate smaller
+	public void rescale(double scale); // This replaces the enlarge and shrink methods. A
+										// scale factor will be passed as a parameter. A
+										// scale of 2 should make your components twice as
+										// large while a 0.5 scale makes it half as large.
 }
