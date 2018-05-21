@@ -18,7 +18,7 @@ public interface SimpGraphics {
 
 	public void create(); // Constructs JFrame for your group
 
-	public void destroy(); // Turns of JFrame
+	public void destroy(); // Turns off JFrame
 
 	public void rescale(double scale); // This replaces the enlarge and shrink methods. A
 										// scale factor will be passed as a parameter. A
