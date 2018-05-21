@@ -8,12 +8,12 @@ public interface SimpGraphics {
 	 * additional methods we might require.
 	 */
 
-	public boolean isActive();  // Checks whether the implemented class's variable was
-				   // evoked/activated. If the variable is false then return false
-
 	public void inactiveTimer(int seconds);  // if a user hasn't pressed a button or touched the screen
-					        // in a set amount of time then set your chosen
+					        // in a set amount of time then set your private sentinel
 					       // variable as false
+	
+	public boolean isActive();  // Checks whether the implemented class's variable was
+				   // evoked/activated. Return your private sentinel variable
 
 	public void create(); // Constructs JFrame for your group
 
