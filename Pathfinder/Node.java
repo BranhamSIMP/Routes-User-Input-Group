@@ -19,7 +19,7 @@ public class Node implements Comparable<Node>{
 		this.y=y;
 		
 		f(paren, this, goal, mvmtcost);
-//		System.out.println(this.getf()+", "+gcost+", "+heuristic);
+//	System.out.println(heuristic);
 	}
 //	public Node(Node paren, int x, int y, float mvmtcost) {
 //		this.parent=paren;
@@ -69,6 +69,7 @@ public class Node implements Comparable<Node>{
 						if(nm.Points[this.getX()+x][this.getY()+y] ==null) {
 						
 						}
+						
 					else {
 					
 					if((x==1 || x==-1) && (y==1 || y==-1)) {
@@ -87,9 +88,15 @@ public class Node implements Comparable<Node>{
 		return a;
 	}
 	public Node pull(Iterator<Node> n) {
+		
 		while(n.hasNext()) {
+			
+			
 			Node tmp=n.next();
+			
+			
 			if(tmp.getX()==this.getX() && tmp.getY()==this.getY()) {
+				
 				return tmp;
 			}
 			
@@ -124,7 +131,7 @@ public class Node implements Comparable<Node>{
 	        float dx = Math.abs(goal.getX() - successor.getX());
 	        float dy = Math.abs(goal.getY() - successor.getY());
 
-	        float h = Math.max(dx,dy);
+	        float h = (float) Math.sqrt(dx*dx+dy*dy);
 	        successor.heuristic=h;
 	    }
 
