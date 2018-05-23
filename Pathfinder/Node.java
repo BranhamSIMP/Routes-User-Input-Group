@@ -100,7 +100,7 @@ public class Node implements Comparable<Node>{
 	public int compareTo( Node parent) {
 		
 		float a= parent.f-this.f;
-		if(a<0) {
+		if(a>0) {
 			return -1;
 		}
 		else if(a==0f) {
