@@ -36,15 +36,19 @@ public class PixelTraverse {
 	// Put node_start on the OPEN list
 	OPEN.add(node_start);
 
+	
 	// while the OPEN list is not empty
 	Key:while(OPEN.size()>0)
 	{
-		
+
 	 //Get the node off the open list
 	 //with the lowest f and call it node_current
 	 Node node_current = OPEN.first();
 	 OPEN.remove(OPEN.first());
 
+	
+	 
+		
 	 //if node_current is the same state as node_goal we
 	 //have found the solution;
 	 //break from the while loop;
@@ -53,7 +57,7 @@ public class PixelTraverse {
 	   node_goal.setParent(node_current.getParent());
 	   break;
 	 }
-	 System.out.println(node_current.getX()+", "+node_current.getY());
+//	 System.out.println(node_current.getX()+", "+node_current.getY());
 	 //Generate each state node_successor that can come after node_current
 	 ArrayList<Node> successors = node_current.GetSuccessors(nm, node_goal);
 	 
@@ -62,7 +66,8 @@ public class PixelTraverse {
 	 for(Node node_successor:successors)
 	 {
 	
-		 
+			
+			
 	   //Set the cost of node_successor to be the cost of node_current plus
 	   //the cost to get to node_successor from node_current
 	   //--> already set while we were getting successors
@@ -73,7 +78,7 @@ public class PixelTraverse {
 	   //if node_successor is on the OPEN list but the existing one is as good
 	   //or better then discard this successor and continue
 		 Node n = node_successor.pull(opennode);
-
+		 
 		 
 		   if(n!=null) {
 			   
@@ -98,13 +103,14 @@ public class PixelTraverse {
 		   
 	   }
 	   
-
+	   
 	   //Remove occurences of node_successor from OPEN and CLOSED
 	   if(n !=null) {
 	  OPEN.remove(n);
 	   }
 	   if(na != null) {
 	  CLOSED.remove(na);
+
 	   }
 	   //Set the parent of node_successor to node_current;
 	   //--> already set while we were getting successors
@@ -119,7 +125,7 @@ public class PixelTraverse {
 	  }
 	  //Add node_current to the CLOSED list
 	  CLOSED.add(node_current);
-	
+
 	}
 	// Once we get to the goal, follow parent nodes to find the solution path.
 
