@@ -12,13 +12,15 @@ public class Node implements Comparable<Node>{
 	private int y;
 	private float f;
 	float gcost;
+	float mvmtcost;
 	float heuristic;
 	public Node(Node paren, Node goal, int x, int y, float mvmtcost) {
 		this.parent=paren;
 		this.x=x;
 		this.y=y;
 		
-		f(paren, this, goal, mvmtcost);
+		f(this, goal, mvmtcost);
+	
 //	System.out.println(heuristic);
 	}
 //	public Node(Node paren, int x, int y, float mvmtcost) {
@@ -64,9 +66,9 @@ public class Node implements Comparable<Node>{
 				if((x==0 && y==0)) {
 				}
 				else if(this.getX()+x>=0 && this.getX()+x<nm.width && this.getY()+y>=0 && this.getY()+y<nm.height ) {
-//					if(nm.Points[this.getY()+y][this.getX()+x] ==null) 
-//					{
-						if(nm.Points[this.getX()+x][this.getY()+y] ==null) {
+			if(nm.Points[this.getY()+y][this.getX()+x] ==null) 
+					{
+						//if(nm.Points[this.getX()+x][this.getY()+y] ==null) {
 						
 						}
 						
@@ -93,7 +95,7 @@ public class Node implements Comparable<Node>{
 			
 			
 			Node tmp=n.next();
-			
+			System.out.println(tmp.getX()+", "+tmp.getY()+", "+tmp.getf());
 			
 			if(tmp.getX()==this.getX() && tmp.getY()==this.getY()) {
 				
@@ -118,10 +120,10 @@ public class Node implements Comparable<Node>{
 		}
 		
 	}
-	private static void f(Node parent, Node successor, Node goal, float mvmtcost)
+	private static void f(Node successor, Node goal, float mvmtcost)
 	{
 	    h(successor, goal);
-	    g(parent, successor, mvmtcost);
+	    g(successor, mvmtcost);
 	    successor.f=successor.gcost+successor.heuristic;
 	    
 	}
@@ -132,16 +134,24 @@ public class Node implements Comparable<Node>{
 	        float dy = Math.abs(goal.getY() - successor.getY());
 
 	        float h = (float) Math.sqrt(dx*dx+dy*dy);
+
 	        successor.heuristic=h;
 	    }
 
-	private static void g(Node start, Node successor,float mvmtcost)
+	private static void g(Node successor,float mvmtcost)
 	    {
-	        successor.gcost=start.gcost+mvmtcost;
+		successor.mvmtcost=mvmtcost;
+		successor.gcost=0;
+		Node p=successor;
+	       while(p!=null) {
+	    	   successor.gcost+=p.mvmtcost;
+	    	   p=p.getParent();
+	    	   
+	       }
 	        
 	    }
 	public boolean isMatch(Node n) {
-		if(n.getX()==this.getX() && n.getY()==n.getY()) {
+		if((n.getX()==this.getX()) && (n.getY()==this.getY())) {
 			return true;
 		}
 		else {
