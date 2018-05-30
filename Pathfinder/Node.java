@@ -66,7 +66,8 @@ public class Node implements Comparable<Node>{
 				if((x==0 && y==0)) {
 				}
 				else if(this.getX()+x>=0 && this.getX()+x<nm.width && this.getY()+y>=0 && this.getY()+y<nm.height ) {
-			if(nm.Points[this.getY()+y][this.getX()+x] ==null) 
+			
+					if(nm.Points[this.getY()+y][this.getX()+x] ==null) 
 					{
 						//if(nm.Points[this.getX()+x][this.getY()+y] ==null) {
 						
@@ -89,20 +90,24 @@ public class Node implements Comparable<Node>{
 		}
 		return a;
 	}
-	public Node pull(Iterator<Node> n) {
+	public Node pull(TreeSet<Node> t) {
+		Iterator<Node> n = t.iterator();
 		
 		while(n.hasNext()) {
 			
 			
 			Node tmp=n.next();
-			System.out.println(tmp.getX()+", "+tmp.getY()+", "+tmp.getf());
+			
 			
 			if(tmp.getX()==this.getX() && tmp.getY()==this.getY()) {
 				
+				//System.out.println(tmp.getX()+", "+tmp.getY()+", "+tmp.getf());
 				return tmp;
 			}
 			
+			
 		}
+		
 		return null;
 	}
 	@Override
