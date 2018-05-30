@@ -9,12 +9,13 @@ import javax.imageio.ImageIO;
 
 public class PixelProcessor {
 
-	public static int[][] convertTo2D(BufferedImage image) {
-
-	      final byte[] pixels = ((DataBufferByte) image.getRaster().getDataBuffer()).getData();
-	      final int width = image.getWidth();
-	      final int height = image.getHeight();
-	      final boolean hasAlphaChannel = image.getAlphaRaster() != null;
+	public static int[][] convertTo2D(BufferedImage bb) {
+//		BufferedImage bb = new BufferedImage(image.getWidth(), image.getHeight(),  
+//				BufferedImage.TYPE_3BYTE_BGR);
+	      final byte[] pixels = ((DataBufferByte) bb.getRaster().getDataBuffer()).getData();
+	      final int width = bb.getWidth();
+	      final int height = bb.getHeight();
+	      final boolean hasAlphaChannel = bb.getAlphaRaster() != null;
 
 	      int[][] result = new int[height][width];
 	      if (hasAlphaChannel) {
