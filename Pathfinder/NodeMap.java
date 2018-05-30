@@ -24,7 +24,7 @@ public class NodeMap {
 		this.height=bi.getHeight();
 		Points=new Point[this.height][this.width];
 		for(int y=0;y<bi.getHeight();y++) {
-			ArrayList<Point> row = new ArrayList<Point>();
+			
 			for(int x =0;x<bi.getWidth();x++) {
 				if(pixels[y][x] == roadcolorvalue) {
 				Points[y][x]=new Point(x,y);
@@ -38,16 +38,23 @@ public class NodeMap {
 		
 	}
 	
-//	public static void main(String args[]) throws IOException {
-//		NodeMap m = new NodeMap(ImageIO.read(new File("orthogonal_maze_with_20_by_20_cells.png")),16777216);
-//		
+	public static void main(String args[]) throws IOException {
+		NodeMap m = new NodeMap(ImageIO.read(new File("40133654-422f3c42-58f5-11e8-92ff-88f9042b3984.png")),1);
+		
 //		for(int r=0;r<height;r++) {
 //			for(int c=0;c<width;c++) {
-////				System.out.println(m.Points[r][c]);
+//				System.out.println(m.Points[r][c]);
 //				System.out.println(m.pixels[r][c]);
 //			}
 //		}
-//	}
+		
+			for(int c=0;c<width;c++) {
+				System.out.println(m.Points[449][c]);
+				System.out.println(m.pixels[449][c]);
+			}
+		System.out.println(m.pixels[840][672]);
+		
+	}
 	
 	
 	
