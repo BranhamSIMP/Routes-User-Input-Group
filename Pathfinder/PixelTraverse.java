@@ -31,37 +31,39 @@ public class PixelTraverse {
 	// Create OPEN and CLOSED SortedSets
 	TreeSet<Node> OPEN = new TreeSet<Node>();
 	TreeSet<Node> CLOSED = new TreeSet<Node>();
-	Iterator<Node> opennode=OPEN.iterator();
-	Iterator<Node> closednode=OPEN.iterator();
+
 	// Put node_start on the OPEN list
 	OPEN.add(node_start);
 
 	
 	// while the OPEN list is not empty
-	Key:while(OPEN.size()>0)
+	while(OPEN.size()>0)
 	{
 
 	 //Get the node off the open list
 	 //with the lowest f and call it node_current
 	 Node node_current = OPEN.first();
+	 //System.out.println(node_current.getX()+"," +node_current.getY());
 	 OPEN.remove(OPEN.first());
-
 	
 	 
 		
 	 //if node_current is the same state as node_goal we
 	 //have found the solution;
 	 //break from the while loop;
+
 	 if (node_current.isMatch (node_goal))
 	 {
+		 
 	   node_goal.setParent(node_current.getParent());
+	 
 	   break;
 	 }
 //	 System.out.println(node_current.getX()+", "+node_current.getY());
 	 //Generate each state node_successor that can come after node_current
 	 ArrayList<Node> successors = node_current.GetSuccessors(nm, node_goal);
 	 
-	 
+	 //System.out.println(successors.size());
 	 //for each node_successor or node_current
 	 for(Node node_successor:successors)
 	 {
@@ -77,8 +79,8 @@ public class PixelTraverse {
 	   
 	   //if node_successor is on the OPEN list but the existing one is as good
 	   //or better then discard this successor and continue
-		 Node n = node_successor.pull(opennode);
-		 
+		 Node n = node_successor.pull(OPEN);
+		  
 		 
 		   if(n!=null) {
 			   
@@ -94,7 +96,7 @@ public class PixelTraverse {
 	   //if node_successor is on the CLOSED list
 	   //but the existing one is as good
 	   //or better then discard this successor and continue;
-	   Node na = node_successor.pull(closednode);
+	   Node na = node_successor.pull(CLOSED);
 	   if(na!=null) {
 		   if(node_successor.compareTo(na)>0) {
 			   continue;
@@ -103,7 +105,7 @@ public class PixelTraverse {
 		   
 	   }
 	   
-	   
+	 
 	   //Remove occurences of node_successor from OPEN and CLOSED
 	   if(n !=null) {
 	  OPEN.remove(n);
