@@ -1,8 +1,9 @@
-package Pathfinder;
+package PathFinder;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
+import java.util.PriorityQueue;
 import java.util.TreeSet;
 
 public class Node implements Comparable<Node>{
@@ -63,9 +64,9 @@ public class Node implements Comparable<Node>{
 		ArrayList<Node> a=new ArrayList<Node>(0);
 		for(int x=-1;x<2;x++) {
 			for(int y=-1;y<2;y++) {
-				if((x==0 && y==0)) {
-				}
-				else if(this.getX()+x>=0 && this.getX()+x<nm.width && this.getY()+y>=0 && this.getY()+y<nm.height ) {
+//				if((x==0 && y==0)) {
+//				}
+				if(this.getX()+x>=0 && this.getX()+x<nm.width && this.getY()+y>=0 && this.getY()+y<nm.height ) {
 			
 					if(nm.Points[this.getY()+y][this.getX()+x] ==null) 
 					{
@@ -76,7 +77,7 @@ public class Node implements Comparable<Node>{
 					else {
 					
 					if((x==1 || x==-1) && (y==1 || y==-1)) {
-						a.add(new Node(this, goal,this.getX()+x, this.getY()+y, (float)Math.sqrt(2)));
+						a.add(new Node(this, goal,this.getX()+x, this.getY()+y, 1.414f));
 					
 					}
 					else {
@@ -90,7 +91,7 @@ public class Node implements Comparable<Node>{
 		}
 		return a;
 	}
-	public Node pull(TreeSet<Node> t) {
+	public Node pull(PriorityQueue<Node> t) {
 		Iterator<Node> n = t.iterator();
 		
 		while(n.hasNext()) {
@@ -135,24 +136,37 @@ public class Node implements Comparable<Node>{
 
 	private static void h(Node successor, Node goal)
 	    {
-	        float dx = Math.abs(goal.getX() - successor.getX());
-	        float dy = Math.abs(goal.getY() - successor.getY());
-
-	        float h = (float) Math.sqrt(dx*dx+dy*dy);
-
+		//EXPLANATION:
+		
+		//https://stackoverflow.com/questions/26558994/weird-behavior-in-a-algorithm-with-diagonal-heuristic
+		
+	        float dx = Math.abs(successor.getX()-goal.getX());
+        float dy = Math.abs(successor.getY()-goal.getY());
+//        float mx=Math.max(dx, dy);
+//        float mn=Math.min(dx, dy);
+//		float hi =(dx + dy) - .5857f* Math.min(dx, dy);
+		float h = (float) Math.sqrt(dx*dx+dy*dy);
+//		float  hi=(float) Math.max(dx,dy)+(.414f)*Math.min(dx, dy);
+		
 	        successor.heuristic=h;
+	        
+	       // successor.heuristic=(dx + dy) - .586f * Math.min(dx, dy);
 	    }
 
 	private static void g(Node successor,float mvmtcost)
 	    {
 		successor.mvmtcost=mvmtcost;
-		successor.gcost=0;
-		Node p=successor;
-	       while(p!=null) {
-	    	   successor.gcost+=p.mvmtcost;
-	    	   p=p.getParent();
-	    	   
-	       }
+		successor.gcost=successor.getParent().gcost+mvmtcost;
+		
+//		successor.mvmtcost=mvmtcost;
+//		successor.gcost=0;
+//		Node p=successor;
+//	       while(p!=null) {
+//	    	   successor.gcost+=p.mvmtcost;
+//	    	   p=p.getParent();
+//	    	   
+//	       }
+	      
 	        
 	    }
 	public boolean isMatch(Node n) {
