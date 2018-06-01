@@ -1,0 +1,57 @@
+{
+	"wings" : [
+		{
+			"description" : "Band Wing",
+			"buttons" : [
+				{
+					"upperLeft" : [0.525322, 0.38804],
+					"lowerRight" : [0.625751, 0.509783]
+				}
+			],
+			"rooms" : [
+				{
+					"description" : "Room 64 (Band)",
+					"buttons" : [
+						{
+							"upperLeft" : [0.149356, 0.121739],
+							"lowerRight" : [0.25236, 0.21413]
+						}
+					]
+					
+				},
+				{
+					"description" : "Room 63 (Choir)",
+					"buttons" : [
+						{
+							"upperLeft" : [0.149356, 0.121739],
+							"lowerRight" : [0.25236, 0.21413]
+						}
+					]
+					
+				}
+			]
+		}
+	],
+	
+	"rooms" : [
+		{
+			"description" : "Main Office",
+			"buttons" : [
+				{
+					"upperLeft" : [0.149356, 0.121739],
+					"lowerRight" : [0.25236, 0.21413]
+				}
+			]
+		},
+		{
+			"description": "Gym",
+			"buttons" : [
+				{
+					"upperLeft": [0.657511, 0.177174],
+					"lowerRight": [0.8643777, 0.29565]
+				}
+			]
+		}
+	]
+}	
+		
