@@ -29,10 +29,9 @@ public class PixelTraverse {
 	
 
 	// Create OPEN and CLOSED SortedSets
-	PriorityQueue<Node> OPEN = new PriorityQueue<Node>();
-	PriorityQueue<Node> CLOSED = new PriorityQueue<Node>();
-	LinkedHashSet<Node> OPEN_sortbyx=new LinkedHashSet<Node>();
-	LinkedHashSet<Node> CLOSED_sortbyx=new LinkedHashSet<Node>();
+	TreeSet<Node> OPEN = new TreeSet<Node>();
+	TreeSet<Node> CLOSED = new TreeSet<Node>();
+	
 	
 	// Put node_start on the OPEN list
 	OPEN.add(node_start);
@@ -44,8 +43,10 @@ public class PixelTraverse {
 
 	 //Get the node off the open list
 	 //with the lowest f and call it node_current
-	 Node node_current = OPEN.poll();
-	 //System.out.println(node_current.getX()+"," +node_current.getY());
+	 Node node_current = OPEN.first();
+	 OPEN.remove(node_current);
+	
+	 
 	
 	 
 		
