@@ -1,57 +1,796 @@
 {
-	"wings" : [
+	"wings": [
 		{
-			"description" : "Band Wing",
-			"buttons" : [
+			"description": "Band Wing",
+			"buttons": [
 				{
-					"upperLeft" : [0.525322, 0.38804],
-					"lowerRight" : [0.625751, 0.509783]
+					"upperLeft": [
+						0.525322,
+						0.38804
+					],
+					"lowerRight": [
+						0.625751,
+						0.509783
+					]
 				}
 			],
-			"rooms" : [
+			"rooms": [
 				{
-					"description" : "Room 64 (Band)",
-					"buttons" : [
+					"description": "Room 64 (Band)",
+					"buttons": [
 						{
-							"upperLeft" : [0.149356, 0.121739],
-							"lowerRight" : [0.25236, 0.21413]
+							"upperLeft": [
+								0.149356,
+								0.121739
+							],
+							"lowerRight": [		
+								0.25236,
+								0.21413
+							]
 						}
 					]
-					
 				},
 				{
-					"description" : "Room 63 (Choir)",
-					"buttons" : [
+					"description": "Room 63 (Choir)",
+					"buttons": [
 						{
-							"upperLeft" : [0.149356, 0.121739],
-							"lowerRight" : [0.25236, 0.21413]
+							"upperLeft": [
+								0.149356,
+								0.121739
+							],
+							"lowerRight": [
+								0.25236,
+								0.21413
+							]
 						}
 					]
-					
+				}
+			]
+		},
+		{
+			"description": "Miscellanous Wing",		
+			"buttons": [
+				{
+					"upperLeft": [
+						0.2755364807,
+						0.4
+					],
+					"lowerRight": [
+						0.3690987124,
+						0.5244444444
+					]
+				}
+			],
+			"rooms": [
+				{
+					"description": "Spanish Room",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.2755364807,
+								0.4
+							],
+							"lowerRight": [
+								0.3690987124,
+								0.5244444444
+							]
+						}
+					]
+				},
+				{
+					"description": "Science Room",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.2755364807,
+								0.4
+							],
+							"lowerRight": [
+								0.3690987124,
+								0.5244444444
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "PE Wing",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.876394,
+						0.30666667
+					],
+					"lowerRight": [
+						0.917596,
+						0.37888889
+					]
+				}
+			],
+			"rooms": [
+				{
+					"description": "Room 66",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.876394,
+								0.30666667
+							],
+							"lowerRight": [
+								0.9141630901,
+								0.335555556
+							]
+						}
+					]
+				},
+				{
+					"description": "Room 65",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.8746781116,
+								0.345555556
+							],
+							"lowerRight": [
+								0.917596,
+								0.37888889
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Science Wing",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.126180,
+						0.2611111
+					],
+					"lowerRight": [
+						0.269527,
+						0.43888889
+					]
+				}
+			],
+			"rooms": [
+				{
+					"description": "Destroyed",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.126180,
+								0.2611111
+							],
+							"lowerRight": [
+								0.269527,
+								0.43888889
+							]
+						}
+					]
+				},
+				{
+					"description": "Destroyed",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.126180,
+								0.2611111
+							],
+							"lowerRight": [
+								0.269527,
+								0.43888889
+							]
+						}
+					]
+				},
+				{
+					"description": "Destroyed",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.126180,
+								0.2611111
+							],
+							"lowerRight": [
+								0.269527,
+								0.43888889
+							]
+						}
+					]
+				},
+				{
+					"description": "Destroyed",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.126180,
+								0.2611111
+							],
+							"lowerRight": [
+								0.269527,
+								0.43888889
+							]
+						}
+					]
+				},
+				{
+					"description": "Destroyed",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.126180,
+								0.2611111
+							],
+							"lowerRight": [
+								0.269527,
+								0.43888889
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Book room/Student Store Wing",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.277253189,
+						0.53666666
+					],
+					"lowerRight": [
+						0.3442060086,
+						0.616666667
+					]
+				}
+			],
+			"rooms": [
+				{
+					"description": "Book Room",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.277253189,
+								0.53666666
+							],
+							"lowerRight": [
+								0.3442060086,
+								0.616666667
+							]
+						}
+					]
+				},
+				{
+					"description": "Student Store",
+					"buttons": [
+						{
+							"upperLeft": [
+								0.277253189,
+								0.53666666
+							],
+							"lowerRight": [
+								0.3442060086,
+								0.616666667
+							]
+						}
+					]
 				}
 			]
 		}
 	],
-	
-	"rooms" : [
+	"rooms": [
 		{
-			"description" : "Main Office",
-			"buttons" : [
+			"description": "Main Office",
+			"buttons": [
 				{
-					"upperLeft" : [0.149356, 0.121739],
-					"lowerRight" : [0.25236, 0.21413]
+					"upperLeft": [
+						0.149356,
+						0.121739
+					],
+					"lowerRight": [
+						0.25236,
+						0.21413
+					]
 				}
 			]
 		},
 		{
 			"description": "Gym",
-			"buttons" : [
+			"buttons": [
 				{
-					"upperLeft": [0.657511, 0.177174],
-					"lowerRight": [0.8643777, 0.29565]
+					"upperLeft": [
+						0.657511,
+						0.177174
+					],
+					"lowerRight": [
+						0.8643777,
+						0.29565
+					]
+				}
+			]
+		},
+		{
+			"description": "Boys Locker Room",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.64978,
+						0.298888888
+					],
+					"lowerRight": [
+						0.811115,
+						0.38
+					]
+				}
+			]
+		},
+		{
+			"description": "Girls Locker Room",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.6532188841,
+						0.45
+					],
+					"lowerRight": [
+						0.7167381974,
+						0.648888889
+					]
+				}
+			]
+		},
+		{
+			"description": "PAC",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.6386266094,
+						0.0977777778
+					],
+					"lowerRight": [
+						0.7493562232,
+						0.165555556
+					]
+				}
+			]
+		},
+		{
+			"description": "Weight Room",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.8480686695,
+						0.44888889
+					],
+					"lowerRight": [
+						0.9055793991,
+						0.518888889
+					]
+				}
+			]
+		},
+		{
+			"description": "Small Gym",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.721888412,
+						0.55666667
+					],
+					"lowerRight": [
+						0.872961374,
+						0.6155555556
+					]
+				}
+			]
+		},
+		{
+			"description": "The Rock",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.3639484979,
+						0.135555556
+					],
+					"lowerRight": [
+						0.4154506438,
+						0.1755555556
+					]
+				}
+			]
+		},
+		{
+			"description": "Cafertorium",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.2712446,
+						0.181111111
+					],
+					"lowerRight": [
+						0.52875536,
+						0.294444444
+					]
+				}
+			]
+		},
+		{
+			"description": "Library",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.1330472,
+						0.4855555
+					],
+					"lowerRight": [
+						0.260944206,
+						0.61
+					]
+				}
+			]
+		},
+		{
+			"description": "Quad",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.382832618,
+						0.3288888889
+					],
+					"lowerRight": [
+						0.5236051502,
+						0.617777778
+					]
+				}
+			]
+		},
+		{
+			"description": "Pool",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.737339055,
+						0.327777777
+					],
+					"lowerRight": [
+						0.834334763,
+						0.534444444
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 1",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.13991416,
+						0.66666666
+					],
+					"lowerRight": [
+						0.17768240,
+						0.76666666
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 1",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.0858369099,
+						0.7411111111
+					],
+					"lowerRight": [
+						0.1373390558,
+						0.8688888889
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 2",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.1948497854,
+						0.64666666667
+					],
+					"lowerRight": [
+						0.2540772531,
+						0.79
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 2",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.1596566524,
+						0.7866666667
+					],
+					"lowerRight": [
+						0.217167382,
+						0.913333333
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 3",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.2901287554,
+						0.6388888889
+					],
+					"lowerRight": [
+						0.3459227468,
+						0.7766666667
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 3",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.2463519313,
+						0.7544444444
+					],
+					"lowerRight": [
+						0.3064377682,
+						0.9066666667
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 4",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.363948979,
+						0.65
+					],
+					"lowerRight": [
+						0.4377682403,
+						0.8055555556
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 4",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.330472103,
+						0.774444444
+					],
+					"lowerRight": [
+						0.4034334764,
+						0.9177777776
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 5",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.4515021459,
+						0.6566666667
+					],
+					"lowerRight": [
+						0.5339055794,
+						0.7744444444
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 5",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.4248927039,
+						0.7811111111
+					],
+					"lowerRight": [
+						0.4969957082,
+						0.9255555556
+					]
+				}
+			]
+		},
+		{
+			"description": "Student Service Center",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.5493562232,
+						0.65
+					],
+					"lowerRight": [
+						0.6283261803,
+						0.7988888889
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 6",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.5175965665,
+						0.7766666667
+					],
+					"lowerRight": [
+						0.5948497854,
+						0.9222222222
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 7",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.6446351931,
+						0.6555555556
+					],
+					"lowerRight": [
+						0.7167381974,
+						0.7944444444
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 7",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.6068669528,
+						0.7766666667
+					],
+					"lowerRight": [
+						0.6806866953,
+						0.9155555556
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 8",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.7287553648,
+						0.6544444444
+					],
+					"lowerRight": [
+						0.7991416309,
+						0.7855555556
+					]
+				}
+			]
+		},
+		{
+			"description": "Wing 8",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.6987124464,
+						0.77
+					],
+					"lowerRight": [
+						0.7527896996,
+						0.9144444444
+					]
+				}
+			]
+		},
+		{
+			"description": "Room 59",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.8317596567,
+						0.6555555556
+					],
+					"lowerRight": [
+						0.9038626609,
+						0.7677777778
+					]
+				}
+			]
+		},
+		{
+			"description": "Ashes",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.876394898,
+						0.792222222
+					],
+					"lowerRight": [
+						0.9210300429,
+						0.8288888889
+					]
+				}
+			]
+		},
+		{
+			"description": "Room 60",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.7965665236,
+						0.7355555556
+					],
+					"lowerRight": [
+						0.8712446352,
+						0.8833333333
+					]
+				}
+			]
+		},
+		{
+			"description": "Room 61/62",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.7579399142,
+						0.8544444444
+					],
+					"lowerRight": [
+						0.8403433476,
+						0.9533333333
+					]
+				}
+			]
+		},
+		{
+			"description": "Portables",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.5536480687,
+						0.9433333333
+					],
+					"lowerRight": [
+						0.7141630901,
+						0.9811111111
+					]
+				}
+			]
+		},
+		{
+			"description": "Follow me on Twitter: @mitchellbraun34",
+			"buttons": [
+				{
+					"upperLeft": [
+						0.029184594,
+						0.087777778
+					],
+					"lowerRight": [
+						0.0841201717,
+						0.1711111111
+					]
 				}
 			]
 		}
 	]
-}	
-		
+}
