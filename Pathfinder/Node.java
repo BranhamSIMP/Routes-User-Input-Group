@@ -1,6 +1,7 @@
 package PathFinder;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.PriorityQueue;
@@ -15,6 +16,8 @@ public class Node implements Comparable<Node>{
 	float gcost;
 	float mvmtcost;
 	float heuristic;
+	//for testing method speed
+	static long testcount=0;
 	public Node(Node paren, Node goal, int x, int y, float mvmtcost) {
 		this.parent=paren;
 		this.x=x;
@@ -64,9 +67,10 @@ public class Node implements Comparable<Node>{
 		ArrayList<Node> a=new ArrayList<Node>(0);
 		for(int x=-1;x<2;x++) {
 			for(int y=-1;y<2;y++) {
-//				if((x==0 && y==0)) {
-//				}
-				if(this.getX()+x>=0 && this.getX()+x<nm.width && this.getY()+y>=0 && this.getY()+y<nm.height ) {
+				if((x==0 && y==0)) 
+				{
+				}
+				else if(this.getX()+x>=0 && this.getX()+x<nm.width && this.getY()+y>=0 && this.getY()+y<nm.height ) {
 			
 					if(nm.Points[this.getY()+y][this.getX()+x] ==null) 
 					{
@@ -77,7 +81,7 @@ public class Node implements Comparable<Node>{
 					else {
 					
 					if((x==1 || x==-1) && (y==1 || y==-1)) {
-						a.add(new Node(this, goal,this.getX()+x, this.getY()+y, 1.414f));
+						a.add(new Node(this, goal,this.getX()+x, this.getY()+y, 1.4142f));
 					
 					}
 					else {
@@ -91,19 +95,22 @@ public class Node implements Comparable<Node>{
 		}
 		return a;
 	}
-	public Node pull(PriorityQueue<Node> t) {
-		Iterator<Node> n = t.iterator();
-		
+	public Node pull(TreeSet<Node> oPEN) {
+		Iterator<Node> n = oPEN.iterator();
 		while(n.hasNext()) {
 			
 			
 			Node tmp=n.next();
-			
+			testcount++;
 			
 			if(tmp.getX()==this.getX() && tmp.getY()==this.getY()) {
 				
 				//System.out.println(tmp.getX()+", "+tmp.getY()+", "+tmp.getf());
+				
 				return tmp;
+			}
+			if(tmp.getf()-this.getf()>0) {
+				return null;
 			}
 			
 			
@@ -145,12 +152,11 @@ public class Node implements Comparable<Node>{
 //        float mx=Math.max(dx, dy);
 //        float mn=Math.min(dx, dy);
 //		float hi =(dx + dy) - .5857f* Math.min(dx, dy);
-		float h = (float) Math.sqrt(dx*dx+dy*dy);
-//		float  hi=(float) Math.max(dx,dy)+(.414f)*Math.min(dx, dy);
+		float hi = (float) Math.sqrt(dx*dx+dy*dy);
+//		float  hi=(float) Math.max(dx,dy)+(1.4142f)*Math.min(dx, dy);
 		
-	        successor.heuristic=h;
+        successor.heuristic=hi;
 	        
-	       // successor.heuristic=(dx + dy) - .586f * Math.min(dx, dy);
 	    }
 
 	private static void g(Node successor,float mvmtcost)
